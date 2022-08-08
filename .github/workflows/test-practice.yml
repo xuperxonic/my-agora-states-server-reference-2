@@ -1,0 +1,21 @@
+name: test-practice
+
+on:
+  push:
+    branches: ["reference"] # reference branch에 push를 할 때 실행
+  pull_request:
+    branches: ["reference"] # reference branch에 PR을 보낼 때 실행
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bare Minimum Requirements
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16"
+      - run: npm install
+        working-directory: ./my-agora-states-client
+      - run: npm run test
+        working-directory: ./my-agora-states-client/src
