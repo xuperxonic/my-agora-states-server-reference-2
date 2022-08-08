@@ -19,3 +19,11 @@ jobs:
         working-directory: ./my-agora-states-client
       - run: npm run test
         working-directory: ./my-agora-states-client/src
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Deploy 🚀
+        uses: xuperxonic/my-agora-states-server-reference-2@v4
