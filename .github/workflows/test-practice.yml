@@ -10,9 +10,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Bare Minimum Requirements
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
       - run: npm install
@@ -25,9 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Deploy to Vercel Action
-        uses: xuperxonic/my-agora-states-server-reference-2@latest
+        uses: xuperxonic/my-agora-states-server-reference-2@v3
         with:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
