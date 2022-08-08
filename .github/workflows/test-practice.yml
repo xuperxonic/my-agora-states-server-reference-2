@@ -27,6 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Deploy to Vercel Action
+        uses: actions/checkout@v3
         with:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
