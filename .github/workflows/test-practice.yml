@@ -29,7 +29,6 @@ jobs:
       - name: Deploy to Vercel Action
         uses: xuperxonic/my-agora-states-server-reference-2@v1
         with:
-          GITHUB_TOKEN: ${{ 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 }}
           VERCEL_TOKEN: ${{ YvHTFsvlTw0fB3yRpBkElyYY}}
           VERCEL_ORG_ID: ${{ 1I12eq3LVXFf1wjJO4wX9oZR }}
           VERCEL_PROJECT_ID: ${{ prj_UkOQz5PDsTLMePh76XO2VvVuOsUT }}
