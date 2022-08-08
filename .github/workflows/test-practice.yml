@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy to Vercel Action
-        uses: xuperxonic/my-agora-states-server-reference-2@v1
+        uses: xuperxonic/my-agora-states-server-reference-2@latest
         with:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
